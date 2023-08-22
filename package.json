@@ -5,8 +5,8 @@
   "description": "Todo CURD App with multi-users.",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "author": "Shahidul Islam",
   "license": "ISC",
