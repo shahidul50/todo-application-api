@@ -2,7 +2,7 @@
   "name": "Todo-Application",
   "version": "1.0.0",
   "type": "module",
-  "description": "Todo CURD App with multi-users.",
+  "description": "Todo CURD App with users.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

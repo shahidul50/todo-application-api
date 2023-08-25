@@ -1,10 +1,9 @@
 import express from 'express';
-import path from 'path';
-import dotenv from 'dotenv';
-dotenv.config();
+import cors from 'cors'
+import 'dotenv/config';
 import morgan from 'morgan';
 import cookiePerser from 'cookie-parser';
-import cors from 'cors'
+
 
 //my files
 import connectDB from './confiq/db.js';
@@ -32,18 +31,7 @@ connectDB();
 app.use('/api/users', userRoutes)
 app.use('/api/todos', todoRoutes)
 
-// // Serve frontend
-// if (process.env.NODE_ENV === 'production') {
-//     const __dirname = path.resolve();
-//     app.use(express.static(path.join(__dirname, '../frontend/dist')));
-  
-//     app.get('*', (req, res) =>
-//       res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'))
-//     );
-// } else {
-//     app.get('/', (req, res) => res.send('API is running....'));
-// }
-
+console.log(process.env.NODE_ENV);
 //error Handler
 app.use(notFound)
 app.use(errorHandler)
