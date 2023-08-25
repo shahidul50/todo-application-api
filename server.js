@@ -16,7 +16,7 @@ const app = express();
 
 //CORS(cross origin resource sharing) communication and exchanging data
 app.use(cors({
-  origin: true,
+  origin: 'https://todo-application-api-production.up.railway.app',
   credentials: true,
 }))
 app.use(morgan('dev'));
